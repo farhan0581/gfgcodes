@@ -19,8 +19,16 @@ class TreeNode(object):
 			self.right.inorder()
 		print self.value
 
+	def preorder(self):
+		print self.value
+		if self.left:
+			self.left.inorder()
+		if self.right:
+			self.right.inorder()
 
 
+
+'''
 root = TreeNode(10)
 root.left = TreeNode(9)
 root.right = TreeNode(21)
@@ -28,3 +36,4 @@ root.left.left = TreeNode(7)
 root.right.right = TreeNode(34)
 root.inorder()
 root.postorder()
+'''

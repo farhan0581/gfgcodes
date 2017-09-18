@@ -10,6 +10,7 @@ Output:
 The maximum profit is displayed as shown below. And if there is no profit then print "No Profit".
 '''
 # 4335 1257 3515 5056 
+
 test_cases = int(input())
 while test_cases:
 	test_cases -= 1
