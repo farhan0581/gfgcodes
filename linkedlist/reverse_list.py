@@ -1,3 +1,4 @@
+
 class Node(object):
     """docstring for Node"""
     def __init__(self, *args, **kwargs):
@@ -61,14 +62,15 @@ class LList(object):
     def reverse_k_alternate(self):
         pass
 
-    def reverse_in_groups(self, k=3):
-        current = self.start
+
+    def reverse_in_groups(self, head, k):
+        current = head
         prev = None
         next = None
         count = 0
         
         # reversal of k nodes
-        while current and count < 3:
+        while current and count < k:
             next = current.next
             current.next = prev
             prev = current
@@ -76,31 +78,27 @@ class LList(object):
             count += 1
         
         count = 0
-
-        if self.start.next:
-            self.start.next = current
+        
+        # now head points to last node of reversed part of list
+        if head:
+            head.next = current
+        
         # skip k nodes
-        while count < 3:
-            if current:
-                current = current.next
-            else:
-                break
+        while count < k-1 and current is not None:
+            current = current.next
             count += 1
-
+        
+        # recursively call remaining list
         if current is not None:
-            current.next = self.reverse_in_groups()
+            current.next = self.reverse_in_groups(current.next, k)
 
         return prev
 
 
-
-
-
 l = LList()
-l.create([9,8,7,6,5,4,3,2,1])
+l.create([12,11,10,9,8,7,6,5,4,3,2,1])
 l.iterate()
-# l.reverse()
-# l.iterate()
-l.reverse_in_groups()
+l.reverse()
 l.iterate()
-
+l.start = l.reverse_in_groups(l.start, 2)
+l.iterate()
