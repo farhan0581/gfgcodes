@@ -96,11 +96,11 @@ class LList(object):
 
 
 
-l = LList()
-l.create([9,8,7,6,5,4,3,2,1])
-l.iterate()
+# l = LList()
+# l.create([9,8,7,6,5,4,3,2,1])
+# l.iterate()
 # l.reverse()
 # l.iterate()
-l.reverse_in_groups()
-l.iterate()
+# l.reverse_in_groups()
+# l.iterate()
 
