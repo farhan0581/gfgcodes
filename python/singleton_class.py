@@ -1,5 +1,7 @@
 # Singleton/SingletonPattern.py
 import datetime
+
+
 class OnlyOne:
     class __OnlyOne:
         def __init__(self, arg):
@@ -28,7 +30,7 @@ class A(object):
     instance = None
     def __init__(self, arg):
         if not A.instance:
-            print 'here'
+            print ('here')
             A.instance = A(arg)
         else:
             A.instance.name = arg
