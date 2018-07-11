@@ -17,14 +17,14 @@ class OnlyOne:
     def __getattr__(self, name):
         return getattr(self.instance, name)
 
-x = OnlyOne('sausage')
-print(x)
-y = OnlyOne('eggs')
-print(y)
-z = OnlyOne('spam')
-print(z)
-print(x)
-print(y)
+# x = OnlyOne('sausage')
+# print(x)
+# y = OnlyOne('eggs')
+# print(y)
+# z = OnlyOne('spam')
+# print(z)
+# print(x)
+# print(y)
 
 class A(object):
     instance = None
@@ -44,24 +44,23 @@ class A(object):
 class Logger(object):
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, '_logger'):
-            cls._logger = super(Logger, cls
-                    ).__new__(cls, *args, **kwargs)
+            cls._logger = super(Logger, cls).__new__(cls, *args, **kwargs)
         return cls._logger
 
 
 class B(object):
-    name = datetime.datetime.now().strftime("%s")
+    # name = datetime.datetime.now().strftime("%s")
     def __init__(self, value):
         self.name = value
 
     def check(self):
         return B.name
 
-obj = B('khan')
-obj2 = B('ilma')
+# obj = B('khan')
+# obj2 = B('ilma')
 # print B.name
-print obj.check()
-print obj2.check()
+# print obj.check()
+# print obj2.check()
 
 # obj = B('fdf')
 
@@ -69,3 +68,30 @@ print obj2.check()
 # obj = A('farhan')
 # obj2 = A('khan')
 # print obj
+
+class Singleton(object):
+    """docstring for Singleton"""
+    _instance = None
+
+    def __init__(self, *args, **kwargs):
+        print(kwargs)
+        print '----init----'
+        self.name = kwargs['name']
+        self.email = kwargs['email']
+
+    def __new__(cls, *args, **kwargs):
+        print '----new-----'
+        if not cls._instance:
+            print('here')
+            cls._instance = super(Singleton, cls).__new__(cls, *args, **kwargs)
+        # return super(Singleton, cls).__new__(cls, *args, **kwargs)
+        cls._instance.__init__(*args, **kwargs)
+        return cls._instance
+
+
+obj1 = Singleton(name='farhan', email='gmail')
+obj2 = Singleton(name='faizan', email='yahoo')
+print(obj1.__repr__)
+print(obj2.__repr__)
+print(vars(obj1))
+print(vars(obj2))
