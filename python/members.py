@@ -93,5 +93,8 @@ class Test(object):
     def __new__(cls):
         print('new called')
         return super().__new__(cls)
+    
+    def __call__(self, a, b):
+        print('called __call__')
 
 x = Test()

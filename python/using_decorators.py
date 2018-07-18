@@ -1,6 +1,6 @@
 # using decorators in python
 
-def check(some_function):
+def check(some_function, **kwargs):
 	def test(*args, **kwargs):
 		print('called')
 		print(args, kwargs)
@@ -10,8 +10,8 @@ def check(some_function):
 
 
 var = 'test'
-@check
-def tcheck(var,**kwargs):
+@check(url='undefined')
+def tcheck(var, **kwargs):
 	print('this is hello world')
 
 tcheck(var, key='value')
