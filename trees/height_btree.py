@@ -1,5 +1,11 @@
 from tree_inorder import TreeNode
 
+class Tree:
+   def __init__(self, x):
+       self.val = x
+       self.left = None
+       self.right = None
+
 class Tree(TreeNode):
 	"""docstring for Tree"""
 	def __init__(self, value):
@@ -17,16 +23,20 @@ class Tree(TreeNode):
 		return max(lheight, rheight) + 1
 
 
+
+def minDepth(node):
+	if not node:
+		return 0
+	return 1 + min(minDepth(node.left), minDepth(node.right))
+
+
 root = Tree(1)
 root.left = Tree(2)
 root.right = Tree(3)
-root.left.left = Tree(4)
-root.left.left.left = Tree(7)
-root.left.right = Tree(5)
-print root.findHeight()
+# root.right.left = Tree(4)
+# root.right.left.right = Tree(5)
 
-
-
+print(minDepth(root))
 
 
 

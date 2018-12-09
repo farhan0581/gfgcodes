@@ -14,3 +14,29 @@ class SimpleGen(object):
 obj = SimpleGen(1,10)
 for i in obj:
 	print i
+
+# basically params are initialized once
+def test(a, b=[]):
+	for i in range(a):
+		b.append(i)
+	print(b)
+
+# test(2)
+# test(3, [])
+# test(4)
+
+
+class Test(object):
+	def __init__(nitin):
+		print('in parent')
+	
+class Test1(Test):
+	def __init__(kk, name):
+		kk.name = name
+		print('in child')
+	
+	def test(bla):
+		print(bla.name)
+
+obj = Test1('farhan')
+obj.test()
