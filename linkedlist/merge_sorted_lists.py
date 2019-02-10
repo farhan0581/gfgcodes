@@ -40,7 +40,7 @@ def mergeTwoLists(list1, list2):
     
     while True:
         if list1 and list2:
-            if list1.val < list2.val:
+            if list1.val <= list2.val:
                 dummy.next = list1
                 list1 = list1.next
             else:
@@ -77,7 +77,7 @@ def iterate(start):
     print('->'.join(x))
 
 
-l1 = create([20, 8])
+l1 = create([20])
 l2 = create([15, 11, 4])
 x = mergeTwoLists(l1, l2)
 iterate(x)
