@@ -26,9 +26,4 @@ class Solution:
         
         return result
 
-
-
-
-
-
 print(Solution().slidingMaximum([8, 5, 10, 7, 9, 4, 15, 12, 90, 13],4))
