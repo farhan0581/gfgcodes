@@ -7,7 +7,7 @@ class Solution:
 
         while end-1 >=0:
             if arr[end-1] < arr[end]:
-                # print(end,end-1)
+                # print(end,end-1)  
                 while start >= end-1:
                     if arr[start] > arr[end-1]:
                         temp = arr[start]
