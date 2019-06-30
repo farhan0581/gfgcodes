@@ -24,7 +24,7 @@ class Solution:
                 if arr[left] == 0:
                     count -= 1
                 left += 1
-
+            print(left,right)
             winssize = right-left
             if maxsize < winssize and count <= m:
                 maxsize = winssize
@@ -34,3 +34,4 @@ class Solution:
 
 print(Solution().maxone([0,0],1))
 print(Solution().maxone([1,1,0,1,1,0,0,1,1,1],2))
+print(Solution().maxone([1,1,0,1,1,0,1,1,1],1))
