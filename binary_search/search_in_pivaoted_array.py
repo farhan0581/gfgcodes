@@ -12,7 +12,6 @@ class Solution:
         elif arr[mid] < arr[start]:
             return self.find_pivot(arr, start, mid)
 
-        
 
     def bsearch(self, arr, start, end, num):
         # start = 0
@@ -26,7 +25,6 @@ class Solution:
             elif num < arr[mid]:
                 end = mid-1
         return -1
-
 
     def search(self, arr, num):
         l = len(arr)

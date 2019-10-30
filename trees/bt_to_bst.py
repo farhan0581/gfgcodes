@@ -61,9 +61,9 @@ def lis(seq, m=0, decrease=False):
     cs = []
     pos = lng.index(max(lng))                                                            
     while pos != 0:                                                                       
-        cs.append(seq[pos])                                                               
+        cs.append(seq[pos])                                                        
         pos = ptr[pos]
-    final_lis = list(reversed(cs))                                                                  
+    final_lis = list(reversed(cs))                                                                
     print final_lis
     return len(final_lis)
 

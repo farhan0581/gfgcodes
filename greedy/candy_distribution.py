@@ -57,4 +57,3 @@ class Solution:
 
 print(Solution().candy([12,4,3,11,34,34,1,67]))
 print(Solution().candy([5,5,4,3,2,1]))
-        
