@@ -21,13 +21,13 @@ class Solution:
                         s += cost[i-1][j]
                     if j-1 >= 0:
                         s += cost[i][j-1]
-                    print(s)
+                    # print(s)
                     if i==0 and j==0:
                         pass
                     else:
-                        print('===========')
+                        # print('===========')
                         cost[i][j] = s
-        print(cost)
+        # print(cost)
         return cost[i][j]
 
 a = [

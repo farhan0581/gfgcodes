@@ -1,8 +1,8 @@
-import sys
 class Solution:
     # @param A : list of list of integers
     # @return an integer
     def minPathSum(self, arr):
+        import sys
         MAX = sys.maxsize
 
         for i in xrange(len(arr)):
@@ -23,7 +23,6 @@ class Solution:
                 cost = arr[i][j] + min(up, right)
 
                 arr[i][j] = cost
-        print(i,j)
         return arr[i][j]
 
 a = [  [1, 3, 2],
