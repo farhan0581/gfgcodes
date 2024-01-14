@@ -67,8 +67,8 @@ class Solution:
             elif i > 0 and arr1[i-1] > arr2[j]:
                 end = i-1
 
-# print(Solution().findMedianSortedArrays([23,26,31,35],[3,5,7,9,11,16]))
-# print(Solution().findMedianSortedArrays([3,5,10,11,17],[9,13,20,21,23]))
+print(Solution().findMedianSortedArrays([23,26,31,35],[3,5,7,9,11,16]))
+print(Solution().findMedianSortedArrays([3,5,10,11,17],[9,13,20,21,23]))
 # print(Solution().findMedianSortedArrays([3,5,7,9],[20,21,22,23,24]))
 print(Solution().findMedianSortedArrays([-50, -41, -40, -19, 5, 21, 28],[-50, -21, -10 ]))
         

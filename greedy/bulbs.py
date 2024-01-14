@@ -14,4 +14,5 @@ class Solution:
         
         return flips
 
-print(Solution().bulbs([0,1,0,1]))
+# print(Solution().bulbs([0,1,0,1]))
+print(Solution().bulbs([1,0,0,0,0]))

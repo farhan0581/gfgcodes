@@ -29,13 +29,13 @@ def preorder_traversal(tree):
                 return values
     return values
 
-# root = Node(1)
-# root.left = Node(2)
-# root.left.left = Node(4)
-# root.left.right = Node(5)
-# root.right = Node(3)
-# root.right.left = Node(6)
-# root.right.right = Node(7)
+root = Node(1)
+root.left = Node(2)
+root.left.left = Node(4)
+root.left.right = Node(5)
+root.right = Node(3)
+root.right.left = Node(6)
+root.right.right = Node(7)
 
-# x = preorder_traversal(root)
-# print(x)
+x = preorder_traversal(root)
+print(x)
