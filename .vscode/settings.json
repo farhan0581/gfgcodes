@@ -1,4 +1,6 @@
 {
     "python.pythonPath": "/usr/local/bin/python3",
-    "easycode.model": "gpt-4"
+    "easycode.model": "gpt-4",
+    "gutterpreview.imagePreviewMaxHeight": 1000,
+    "gutterpreview.imagePreviewMaxWidth": 700
 }
