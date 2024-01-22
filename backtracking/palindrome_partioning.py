@@ -40,7 +40,7 @@ class Solution:
             res.append(substr[:])
 
         
-        for i in xrange(start, len(arr)):
+        for i in range(start, len(arr)):
             if self.check_palindrome(arr[start:i+1]):
                 substr.append(''.join(arr[start:i+1]))
                 self._solve(arr, res, substr, i+1)
