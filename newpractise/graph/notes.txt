@@ -1,0 +1,18 @@
+Djkastras algo work for graph without negative weight
+for negative weight cycle, it gives TLE
+
+time = E*logV
+
+
+bellman ford algorithm helps to detect negative weight cycle
+It works only on directed graph, for undirected graphs, you have to represent them as directed graphs
+time = E*V
+
+
+Floyd Warshall
+It is multi source shortest path algorithm
+we use adjacency matrix for this.
+
+Minimum spanning tree:
+- In which we have n nodes and n-1 edges and all nodes are reachable from each other.
+- The tree which has mimimum sum of the edge weights is the MST of a graph 
