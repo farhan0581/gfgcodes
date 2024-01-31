@@ -16,3 +16,6 @@ we use adjacency matrix for this.
 Minimum spanning tree:
 - In which we have n nodes and n-1 edges and all nodes are reachable from each other.
 - The tree which has mimimum sum of the edge weights is the MST of a graph 
+
+Disjoint set:
+It helps to merge dynamically the components, because at every stage the graph changes.
