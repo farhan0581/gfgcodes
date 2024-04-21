@@ -16,7 +16,7 @@ class Solution:
         end = [i for i in sorted(enumerate(end), key=lambda x:x[1])]
         max_meet = 0
         prev_end = -9999
-        
+        print(end)
         
         for i in range(0, n):
             ind = end[i][0]
@@ -31,4 +31,4 @@ n = 6
 start = [1,3,0,5,8,5]
 end =  [2,4,6,7,9,9]
 
-Solution().maximumMeetings(n,start,end)
+print(Solution().maximumMeetings(n,start,end))

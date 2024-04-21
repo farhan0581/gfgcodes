@@ -29,6 +29,26 @@ def postorder_traversal(tree):
     return stack2[::-1]
 
 
+def getPostOrderTraversal(root):
+    if not root:
+        return []
+    s1 = [root]
+    s2 = []
+
+    while len(s1) > 0:
+        node = s1.pop()
+        s2.append(node.data)
+
+        if node.left:
+            s1.append(node.left)
+        
+        if node.right:
+            s1.append(node.right)
+        
+
+    return s2[::-1]
+
+
 root = Node(1)
 root.left = Node(2)
 root.left.left = Node(4)

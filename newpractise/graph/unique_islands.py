@@ -72,7 +72,6 @@ class Solution:
                     self.bfs(grid,vis,i,j,res)
                     c += 1
         
-
         
         unique = []
         for item in res:

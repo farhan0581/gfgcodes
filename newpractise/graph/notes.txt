@@ -19,3 +19,15 @@ Minimum spanning tree:
 
 Disjoint set:
 It helps to merge dynamically the components, because at every stage the graph changes.
+
+bipartite:
+color the graph such that no 2 adjacent nodes have the same color
+linear graph with no cycle are always bipartitle
+even cycle length graph are bipartite
+
+topological sort:
+in a linear ordering of the vertices, such that if there is some edge between u and v, then u must 
+appear before v in the topological sort, they can be multiple.
+only possible for DAG only.
+
+terminal nodes and safe state : used in directed graph
