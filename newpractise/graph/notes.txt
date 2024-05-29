@@ -1,19 +1,26 @@
 Djkastras algo work for graph without negative weight
 for negative weight cycle, it gives TLE
 
-time = E*logV
+time = O(V + E*logV) when used PQ else V2
 
+BFS and DFS
+time : O(E+V)
 
+---------------------------------------------
+Bellman Ford
 bellman ford algorithm helps to detect negative weight cycle
 It works only on directed graph, for undirected graphs, you have to represent them as directed graphs
 time = E*V
 
 
+
 Floyd Warshall
+---------------------------------------------
 It is multi source shortest path algorithm
 we use adjacency matrix for this.
 
 Minimum spanning tree:
+---------------------------------------------
 - In which we have n nodes and n-1 edges and all nodes are reachable from each other.
 - The tree which has mimimum sum of the edge weights is the MST of a graph 
 
@@ -21,13 +28,68 @@ Disjoint set:
 It helps to merge dynamically the components, because at every stage the graph changes.
 
 bipartite:
+---------------------------------------------
 color the graph such that no 2 adjacent nodes have the same color
 linear graph with no cycle are always bipartitle
 even cycle length graph are bipartite
 
 topological sort:
+---------------------------------------------
 in a linear ordering of the vertices, such that if there is some edge between u and v, then u must 
 appear before v in the topological sort, they can be multiple.
 only possible for DAG only.
 
 terminal nodes and safe state : used in directed graph
+
+kahns algorithm
+---------------------------------------------
+Find topological sort for DAG
+1. Calculate first the indegrees of all the node by traversing the adjacency matric
+2. After that push all the nodes whose indegrees are 0, because they must be present before in the topo sort
+3. After that use simple bfs like, but decrease the indegree when you pop the node,
+4. if indegree becomes 0, push it to queue.
+5. continue
+
+
+Shortest Path in Directed Acyclic Graph (DAG)
+---------------------------------------------
+Given an Weighted DAG and a source point, the task is to find the shortest
+path between the source node and every other node in the graph.
+3 Methods to solve this-
+
+- Using Bellman-Ford [ TC = O(VE) ]
+- Using Dijkstra's Algorithm [ TC = O(E + Vlog(V)) ]
+- Topological Sort [ TC = O(V + E) ]
+
+
+
+Single Source Shortest Path in Undirected Graph
+---------------------------------------------
+Given an Unweighted Graph and a source point, the task is to find the shortest path
+between the source point and every other point in the graph.
+3 Methods to solve this-
+
+- Using Bellman-Ford [ TC = O(VE) ]
+- Using Dijkstra's Algorithm [ TC = O(E + Vlog(V)) ]
+- Since the graph is Unweighted, we can solve this problem using Modified BFS. [ TC = O(V + E) ]
+
+
+---------------------------------------------
+Algorithm to find MST:
+- Prims
+    - Greedy approach is used in this algo.
+    - We use minheap here
+    - first create a adjacency list and visited array.
+    - the main thing is that we have to mark visited not while adding to queuue
+    but while consuming from queue after popping, because a vertex can be in minheap multiple times from
+    different places, but since its a minheap, we have gurantee to get the minimum edge.
+    - if poped node is visited, then it means it was visited earlier due to lesser weight of path, so we can
+    safely ignore that.
+  
+- Kruskals
+  This works on disjoint set data structure.Steps:
+  1. sort all the given edges by weight.
+  2. now consume one by one and do union by rank. 
+     2a. If not same component consider that edge to the MST
+     2b. If already same component(same rank), leave that edge.
+

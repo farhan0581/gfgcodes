@@ -81,15 +81,6 @@ def minSubsetSumDifference(arr,n):
     return minDiff
 
 
-
-
-
-
-
-
-
-
-
 l = [1,2,3,4,5,20]
 n=len(l)
 

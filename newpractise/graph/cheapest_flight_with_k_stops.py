@@ -49,6 +49,7 @@ class Solution:
             # print(q)
             hop,node,cost = hq.heappop(q)
             
+            # this is not required
             if node == dst:
                 if cost < minCost:
                     minCost = cost

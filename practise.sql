@@ -109,3 +109,130 @@ select accepter_id as id from RequestAccepted
 ) as t group by t.id order by num desc limit 1
 
 ---------------------------------------------------------------------------------------------------------
+
+Find second highest salary from employee
+
+Select max(salary) as SecondHighestSalary from Employee where salary < (select max(salary) from Employee)
+
+---------------------------------------------------------------------------------------------------------
+
+
+Column Name    | Type    |
++----------------+---------+
+| machine_id     | int     |
+| process_id     | int     |
+| activity_type  | enum    |
+| timestamp      | float   |
++----------------+---------+
+The table shows the user activities for a factory website.
+(machine_id, process_id, activity_type) is the primary key (combination of columns with unique values) of this table.
+machine_id is the ID of a machine.
+process_id is the ID of a process running on the machine with ID machine_id.
+activity_type is an ENUM (category) of type ('start', 'end').
+timestamp is a float representing the current time in seconds.
+'start' means the machine starts the process at the given timestamp and 'end' means the machine ends the process at the given timestamp.
+The 'start' timestamp will always be before the 'end' timestamp for every (machine_id, process_id) pair.
+ 
+
+There is a factory website that has several machines each running the same number of processes. Write a solution to find the average time each machine takes to complete a process.
+
+The time to complete a process is the 'end' timestamp minus the 'start' timestamp. The average time is calculated by the total time to complete every process on the machine divided by the number of processes that were run.
+
+The resulting table should have the machine_id along with the average time as processing_time, which should be rounded to 3 decimal places.
+
+Return the result table in any order.
+
+The result format is in the following example.
+
+ 
+
+Example 1:
+
+Input: 
+Activity table:
++------------+------------+---------------+-----------+
+| machine_id | process_id | activity_type | timestamp |
++------------+------------+---------------+-----------+
+| 0          | 0          | start         | 0.712     |
+| 0          | 0          | end           | 1.520     |
+| 0          | 1          | start         | 3.140     |
+| 0          | 1          | end           | 4.120     |
+| 1          | 0          | start         | 0.550     |
+| 1          | 0          | end           | 1.550     |
+| 1          | 1          | start         | 0.430     |
+| 1          | 1          | end           | 1.420     |
+| 2          | 0          | start         | 4.100     |
+| 2          | 0          | end           | 4.512     |
+| 2          | 1          | start         | 2.500     |
+| 2          | 1          | end           | 5.000     |
++------------+------------+---------------+-----------+
+Output: 
++------------+-----------------+
+| machine_id | processing_time |
++------------+-----------------+
+| 0          | 0.894           |
+| 1          | 0.995           |
+| 2          | 1.456           |
++------------+-----------------+
+Explanation: 
+There are 3 machines running 2 processes each.
+Machine 0's average time is ((1.520 - 0.712) + (4.120 - 3.140)) / 2 = 0.894
+Machine 1's average time is ((1.550 - 0.550) + (1.420 - 0.430)) / 2 = 0.995
+Machine 2's average time is ((4.512 - 4.100) + (5.000 - 2.500)) / 2 = 1.456
+
+
+
+select a1.machine_id, round(avg(a2.timestamp-a1.timestamp), 3) as processing_time 
+from Activity a1
+join Activity a2 
+on a1.machine_id=a2.machine_id and a1.process_id=a2.process_id
+and a1.activity_type='start' and a2.activity_type='end'
+group by a1.machine_id
+
+
+select 
+a.machine_id,
+round(
+      (select avg(a1.timestamp) from Activity a1 where a1.activity_type = 'end' and a1.machine_id = a.machine_id) - 
+      (select avg(a1.timestamp) from Activity a1 where a1.activity_type = 'start' and a1.machine_id = a.machine_id)
+,3) as processing_time
+from Activity a
+group by a.machine_id
+
+
+
+
+select s.student_id,s.student_name,su.subject_name,count(e.subject_name) as attended_exams from 
+Students as s cross join Subjects as su left join Examinations as e
+on e.student_id=s.student_id and e.subject_name=su.subject_name
+group by s.student_id,su.subject_name order by s.student_id,su.subject_name asc
+
+
+
+# Write your MySQL query statement below
+
+
+
+select q1.query_name,round(sum(q1.rating/q1.position)/count(q1.query_name),2) as quality,
+round(100*SUM(CASE WHEN q1.rating < 3 THEN 1 ELSE 0 END)/count(q1.query_name),2) as poor_query_percentage
+from Queries as q1
+where q1.query_name is not NULL
+group by q1.query_name
+
+
+# Write your MySQL query statement below
+
+select DATE_FORMAT(trans_date,'%Y-%m') as month,country,
+count(id) as trans_count,
+SUM(CASE WHEN state='approved' then 1 ELSE 0 END) as approved_count,
+SUM(amount) as trans_total_amount,
+SUM(CASE WHEN state='approved' then amount ELSE 0 END) as approved_total_amount
+from Transactions
+group by month,country
+
+Select round((
+(
+select count(player_id) from Activity where (player_id,DATE_SUB(event_date, INTERVAL 1 DAY)) in (
+    select player_id,min(event_date) as event_date from Activity group by player_id
+)) / (select count(distinct player_id) from Activity)
+),2) as fraction

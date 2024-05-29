@@ -128,7 +128,6 @@ class Solution:
         
         # print(disjoint_set.parent, accounts)
         merged_accounts = []
-        
         for i in range(n):
             
             parent = disjoint_set.ultimate_parent(i)
@@ -189,12 +188,13 @@ accounts = [["fern","fern1@gmail.com","fern7@mail.com","fern9@google.in","fern4@
             ["john","john3@gmail.com"],
             ["john","john0gfg.org","john3@mail.com","john3@mail.com"],
             ["john","john5@gmail.com","john9gfg.org","john6@gmail.com","john2@mail.com","john2@gmail.com","john7gfg.org","john9@mail.com"]]
+accounts = [["David","David0@m.co","David1@m.co"],["David","David3@m.co","David4@m.co"],["David","David4@m.co","David5@m.co"],["David","David2@m.co","David3@m.co"],["David","David1@m.co","David2@m.co"]]
 print(Solution().accountsMerge(accounts))
 
 
 
 
-[['fern', 'fern1@gmail.com', 'fern1@google.in', 'fern1@mail.com', 'fern4@google.in', 'fern7@mail.com', 'fern9@google.in'], ['bob', 'bob4gfg.org', 'bob8@gmail.com'], ['mark', 'mark3@gmail.com', 'mark4@mail.com', 'mark5@mail.com', 'mark6@gmail.com'], ['john', 'john0gfg.org', 'john1@mail.com', 'john1gfg.org', 'john2@gmail.com', 'john2@mail.com', 'john3@mail.com', 'john3@mail.com', 'john5@gmail.com', 'john6@gmail.com', 'john7gfg.org', 'john7gfg.org', 'john8@google.in', 'john9gfg.org'], ['alice', 'alice0@gmail.com', 'alice0gfg.org', 'alice2@google.in', 'alice6gfg.org'], ['bob', 'bob0gfg.org', 'bob5@google.in', 'bob6@google.in', 'bob7@gmail.com', 'bob7@gmail.com', 'bob7@google.in', 'bob7gfg.org'], ['levin', 'levin0gfg.org', 'levin1@gmail.com', 'levin2@mail.com', 'levin3@gmail.com', 'levin4gfg.org', 'levin5gfg.org', 'levin9@mail.com'], ['john', 'john3@gmail.com']]
+# [['fern', 'fern1@gmail.com', 'fern1@google.in', 'fern1@mail.com', 'fern4@google.in', 'fern7@mail.com', 'fern9@google.in'], ['bob', 'bob4gfg.org', 'bob8@gmail.com'], ['mark', 'mark3@gmail.com', 'mark4@mail.com', 'mark5@mail.com', 'mark6@gmail.com'], ['john', 'john0gfg.org', 'john1@mail.com', 'john1gfg.org', 'john2@gmail.com', 'john2@mail.com', 'john3@mail.com', 'john3@mail.com', 'john5@gmail.com', 'john6@gmail.com', 'john7gfg.org', 'john7gfg.org', 'john8@google.in', 'john9gfg.org'], ['alice', 'alice0@gmail.com', 'alice0gfg.org', 'alice2@google.in', 'alice6gfg.org'], ['bob', 'bob0gfg.org', 'bob5@google.in', 'bob6@google.in', 'bob7@gmail.com', 'bob7@gmail.com', 'bob7@google.in', 'bob7gfg.org'], ['levin', 'levin0gfg.org', 'levin1@gmail.com', 'levin2@mail.com', 'levin3@gmail.com', 'levin4gfg.org', 'levin5gfg.org', 'levin9@mail.com'], ['john', 'john3@gmail.com']]
 
 
-[['fern', 'fern1@gmail.com', 'fern1@google.in', 'fern1@mail.com', 'fern4@google.in', 'fern7@mail.com', 'fern9@google.in'], ['bob', 'bob4gfg.org', 'bob8@gmail.com'], ['mark', 'mark3@gmail.com', 'mark4@mail.com', 'mark5@mail.com', 'mark6@gmail.com'], ['john', 'john0gfg.org', 'john1@mail.com', 'john1gfg.org', 'john2@gmail.com', 'john2@mail.com', 'john3@mail.com', 'john5@gmail.com', 'john6@gmail.com', 'john7gfg.org', 'john8@google.in', 'john9@mail.com', 'john9gfg.org'], ['alice', 'alice0@gmail.com', 'alice0gfg.org', 'alice2@google.in', 'alice6gfg.org'], ['bob', 'bob0gfg.org', 'bob5@google.in', 'bob6@google.in', 'bob7@gmail.com', 'bob7@google.in', 'bob7gfg.org', 'bob9@mail.com'], ['levin', 'levin0gfg.org', 'levin1@gmail.com', 'levin2@mail.com', 'levin3@gmail.com', 'levin4gfg.org', 'levin5gfg.org', 'levin9@mail.com'], ['john', 'john3@gmail.com']]
+# [['fern', 'fern1@gmail.com', 'fern1@google.in', 'fern1@mail.com', 'fern4@google.in', 'fern7@mail.com', 'fern9@google.in'], ['bob', 'bob4gfg.org', 'bob8@gmail.com'], ['mark', 'mark3@gmail.com', 'mark4@mail.com', 'mark5@mail.com', 'mark6@gmail.com'], ['john', 'john0gfg.org', 'john1@mail.com', 'john1gfg.org', 'john2@gmail.com', 'john2@mail.com', 'john3@mail.com', 'john5@gmail.com', 'john6@gmail.com', 'john7gfg.org', 'john8@google.in', 'john9@mail.com', 'john9gfg.org'], ['alice', 'alice0@gmail.com', 'alice0gfg.org', 'alice2@google.in', 'alice6gfg.org'], ['bob', 'bob0gfg.org', 'bob5@google.in', 'bob6@google.in', 'bob7@gmail.com', 'bob7@google.in', 'bob7gfg.org', 'bob9@mail.com'], ['levin', 'levin0gfg.org', 'levin1@gmail.com', 'levin2@mail.com', 'levin3@gmail.com', 'levin4gfg.org', 'levin5gfg.org', 'levin9@mail.com'], ['john', 'john3@gmail.com']]

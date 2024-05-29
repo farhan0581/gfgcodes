@@ -4,6 +4,11 @@ from typing import List
 '''
 sorting will take nlogn
 but here we buildheap for k elements => nlogk + logk(if required)
+
+kth largest
+The idea is to construct a max-heap of elements. Since the top element of the max heap is the largest element of the heap, we will remove the top K-1 elements from the heap.  The top element will be Kth's Largest element.
+To get the Kth Smallest element, we will use a min-heap. After the removal of the top k-1 elements, the Kth Smallest element is top of the Priority queue.
+
 '''
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
@@ -17,6 +22,9 @@ class Solution:
             if minheap[0] < nums[i]:
                 hq.heappop(minheap)
                 hq.heappush(minheap, nums[i])
+                
+        
+        return minheap[0]
 
 
 

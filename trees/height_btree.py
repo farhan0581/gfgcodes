@@ -45,8 +45,8 @@ root.right = Tree(3)
 # root.right.left = Tree(4)
 # root.right.left.right = Tree(5)
 
-root=Tree(1);
-root.left=Tree(2);
+root=Tree(1)
+root.left=Tree(2)
 root.left.right=Tree(3)
 
 print(minDepth(root))

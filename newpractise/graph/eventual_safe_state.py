@@ -8,6 +8,7 @@ self loop is also taken care of.
 
 
 this is tough
+keep track of state in the DFS
 '''
 
 

@@ -1,4 +1,4 @@
-class Solution:
+class SolutionOrange:
     
     def bfs(self, grid, q, vis, fresh):
 
@@ -54,6 +54,6 @@ class Solution:
         
 
 
-l =[[0,1,2],[0,1,2],[2,1,1]]
-# l = [[2,2,0,1]]
-print(Solution().orangesRotting(l))
+# l =[[0,1,2],[0,1,2],[2,1,1]]
+# # l = [[2,2,0,1]]
+# print(SolutionOrange().orangesRotting(l))

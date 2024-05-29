@@ -23,6 +23,7 @@ APPRoach simple hai
 
 
 '''
+from typing import List
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         MIN = -9999999999
@@ -67,5 +68,6 @@ class Solution:
 
 
 
-
-        
+l1 = [1,3,7,11]
+l2 = [2,4,6]
+print(Solution().findMedianSortedArrays(l1,l2))

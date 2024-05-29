@@ -1,8 +1,8 @@
 from typing import List
 
 class Solution:
-    # this approach is basic optimal , find the left and right highest and then find the area.
-    def _largestRectangleArea(self, heights: List[int]) -> int:
+    # this approach is basic optimal , find the left and right smallest and then find the area.
+    def largestRectangleArea(self, heights: List[int]) -> int:
         stack = []
         leftbound = [0]*len(heights)
         rightbound = [0]*len(heights)
@@ -46,11 +46,13 @@ class Solution:
         for i in range(len(leftbound)):
             area = (-leftbound[i]+rightbound[i] + 1)*heights[i]
             max_area = max(max_area, area)
+        
+        print(leftbound, rightbound)
 
         return max_area
 
     # this is optimal
-    def largestRectangleArea(self, heights: List[int]) -> int:
+    def _largestRectangleArea(self, heights: List[int]) -> int:
         stack = []
         maxarea = 0
 
@@ -97,6 +99,6 @@ class Solution:
 
 # print(Solution().largestRectangleArea([1,1]))
 
-print(Solution().largestRectangleArea([5,5,5,5,5]))
+# print(Solution().largestRectangleArea([5,5,5,5,5]))
 print(Solution().largestRectangleArea([2,1,5,6,2,3]))
-print(Solution().largestRectangleArea([6, 2, 5, 4, 5, 1, 6]))
+# print(Solution().largestRectangleArea([6, 2, 5, 4, 5, 1, 6]))

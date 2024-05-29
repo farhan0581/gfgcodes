@@ -6,6 +6,21 @@ from the S then mark the distance as 10^8. Note: If the Graph contains a negativ
 
  https://takeuforward.org/data-structure/bellman-ford-algorithm-g-41/
 
+
+ The bellman-Ford algorithm helps to find the shortest distance from the source node to all other nodes. But, we have already learned Dijkstra's algorithm (Dijkstra's algorithm article link) to fulfill the same purpose. Now, the question is how this algorithm is different from Dijkstra's algorithm.
+
+While learning Dijkstra's algorithm, we came across the following two situations, where Dijkstra's algorithm failed:
+
+- If the graph contains negative edges.
+- If the graph has a negative cycle (In this case Dijkstra's algorithm fails to minimize the distance, keeps on running, and goes into an infinite loop. As a result it gives TLE error).
+
+Negative Cycle: A cycle is called a negative cycle if the sum of all its weights becomes negative. The following illustration is an example of a negative cycle:
+
+Bellman-Ford's algorithm successfully solves these problems. It works fine with negative edges as well as it is able to detect if the graph contains a negative cycle. But this algorithm is only applicable for directed graphs. In order to apply this algorithm to an undirected graph, we just need to convert the undirected edges into directed edges like the following:
+
+
+
+
 '''
 class Solution:
     # Function to construct and return cost of MST for a graph

@@ -34,18 +34,24 @@ class DisJoint:
 
 o = DisJoint(7)
 o.union_by_size(1,2)
+print(o.parent, o.size)
 o.union_by_size(2,3)
+print(o.parent, o.size)
 o.union_by_size(4,5)
+print(o.parent, o.size)
 o.union_by_size(6,7)
+print(o.parent, o.size)
 o.union_by_size(5,6)
+print(o.parent, o.size)
 
-print(o.ultimate_parent(3))
-print(o.ultimate_parent(7))
+# print(o.ultimate_parent(3))
+# print(o.ultimate_parent(7))
 
 o.union_by_size(3,7)
+print(o.parent, o.size)
 
-print(o.ultimate_parent(3))
-print(o.ultimate_parent(7))
+# print(o.ultimate_parent(3))
+# print(o.ultimate_parent(7))
 
-print(o.parent)
+# print(o.parent)
 
