@@ -24,9 +24,9 @@ The first row dp[0][] indicates that only the first element of the array is cons
 After that , we will set our nested for loops to traverse the dp array and following the logic discussed in the recursive approach, we will set the value of each cell. Instead of recursive calls, we will use the dp array itself.
 At last we will return dp[n-1][k] as our answer.
 
-/Users/ba-00023252/Desktop/gfgcodes/data/rec-6.jpg
-/Users/ba-00023252/Desktop/gfgcodes/data/rec-7.jpg
-/Users/ba-00023252/Desktop/gfgcodes/data/rec-8.jpg
+/Users/farhankhan/Desktop/gfgcodes/data/rec-6.jpg
+/Users/farhankhan/Desktop/gfgcodes/data/rec-7.jpg
+/Users/farhankhan/Desktop/gfgcodes/data/rec-8.jpg
 
 
 

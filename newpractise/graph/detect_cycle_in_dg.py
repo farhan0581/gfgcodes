@@ -1,7 +1,7 @@
 '''
 Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges, 
 check whether it contains any cycle or not.
-# /Users/ba-00023252/Desktop/gfgcodes/data/cycle_dag.png
+# /Users/farhankhan/Desktop/gfgcodes/data/cycle_dag.png
 '''
 
 class Solution:

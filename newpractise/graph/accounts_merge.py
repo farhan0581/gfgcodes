@@ -74,7 +74,7 @@ While doing so, if we encounter an email again(i.e. If any index is previously a
 After completing step 2, now it’s time to merge the accounts. For merging, we will iterate over all the emails individually and find the ultimate parent(using the findUPar() method) of the assigned index of every email. Then we will add the email of the current account to the index(account index) that is the ultimate parent. Thus the accounts will be merged.
 Finally, we will sort the emails for every account separately and store the final results in the answer array accordingly.
 
-/Users/ba-00023252/Desktop/gfgcodes/data/accounts_merge.png
+/Users/farhankhan/Desktop/gfgcodes/data/accounts_merge.png
 
 
 '''

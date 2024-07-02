@@ -8,7 +8,7 @@ In this question only BFS will work and that too we have to start with the 1's (
 bfs is level based traversal, so every neighbour close to 1 will be touched first, thereby 
 insuring it has minimum distance from 1
 '''
-# /Users/ba-00023252/Desktop/gfgcodes/data/min_dist_1.png
+# /Users/farhankhan/Desktop/gfgcodes/data/min_dist_1.png
 class Solution:
 
 	#Function to find distance of nearest 1 in the grid for each cell.

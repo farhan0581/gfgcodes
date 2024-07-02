@@ -23,7 +23,7 @@ hamein last level hi return karna hai
 visited array hamari map ban gayi hai, ek baar word visit kara to use dobara visit nahein karna hai
 is approach mein sequence nahein pata chalega
 
-/Users/ba-00023252/Desktop/gfgcodes/data/word_tr1.png
+/Users/farhankhan/Desktop/gfgcodes/data/word_tr1.png
 '''
 import string    
 
@@ -38,12 +38,12 @@ class Solution(object):
         
         m = {word:True for word in wordList}
 
-        res = []
+        # res = []
         q = [(beginWord, 1)]
 
         while len(q) > 0:
             w, seq = q.pop(0)
-            res.append(w)
+            # res.append(w)
             if w == endWord:
                 return seq
 

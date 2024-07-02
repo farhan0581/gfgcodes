@@ -28,7 +28,7 @@ stones is sorted in a strictly increasing order.
 
 
 APPROACH:
-/Users/ba-00023252/Desktop/gfgcodes/data/frog_jump.jpg
+/Users/farhankhan/Desktop/gfgcodes/data/frog_jump.jpg
 
 - We have two variables i and k,
 - now based on k, we can go to k, k-1 or k+1 distance

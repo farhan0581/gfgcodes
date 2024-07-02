@@ -49,7 +49,7 @@ class Solution(object):
     
     
     # count pairs separately
-    # /Users/ba-00023252/Desktop/gfgcodes/data/reverse_pair.png
+    # /Users/farhankhan/Desktop/gfgcodes/data/reverse_pair.png
     def countPairs(self, low,mid,high,arr):
         i = low
         j = mid+1

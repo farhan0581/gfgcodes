@@ -39,7 +39,7 @@ upar wali approach tab kaam karegi jab hamein sequence nahein chayein, seq ke li
 
 
 
-/Users/ba-00023252/Desktop/gfgcodes/data/word_tr1.png
+/Users/farhankhan/Desktop/gfgcodes/data/word_tr1.png
 '''
 import string    
 

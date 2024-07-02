@@ -1,7 +1,6 @@
 # Write your MySQL query statement below
 
 Table: Movies
-
 +---------------+---------+
 | Column Name   | Type    |
 +---------------+---------+
@@ -13,7 +12,6 @@ title is the name of the movie.
  
 
 Table: Users
-
 +---------------+---------+
 | Column Name   | Type    |
 +---------------+---------+
@@ -24,7 +22,6 @@ user_id is the primary key (column with unique values) for this table.
  
 
 Table: MovieRating
-
 +---------------+---------+
 | Column Name   | Type    |
 +---------------+---------+
@@ -236,3 +233,17 @@ select count(player_id) from Activity where (player_id,DATE_SUB(event_date, INTE
     select player_id,min(event_date) as event_date from Activity group by player_id
 )) / (select count(distinct player_id) from Activity)
 ),2) as fraction
+
+
+
+
+
+SELECT 
+    select_list
+FROM
+    table_name
+LIMIT [offset,] row_count;
+
+https://www.mysqltutorial.org/wp-content/uploads/2019/08/MySQL-LIMIT-illustration.png
+offset starts from 0
+

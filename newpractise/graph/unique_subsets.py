@@ -42,7 +42,7 @@ class Solution(object):
         self.recur(arr, i+1, nums)
         
 
-    # /Users/ba-00023252/Desktop/gfgcodes/data/print-all-subsets.png
+    # /Users/farhankhan/Desktop/gfgcodes/data/print-all-subsets.png
     def subsetsWithDup(self, nums):
         """
         :type nums: List[int]

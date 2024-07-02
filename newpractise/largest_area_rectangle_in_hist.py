@@ -1,6 +1,7 @@
 from typing import List
 
 class Solution:
+    # We need to keep the items in the stack in the increasing order
     # this approach is basic optimal , find the left and right smallest and then find the area.
     def largestRectangleArea(self, heights: List[int]) -> int:
         stack = []
@@ -50,6 +51,24 @@ class Solution:
         print(leftbound, rightbound)
 
         return max_area
+    
+
+    def findleftmax(self, arr):
+        left = [0]*len(arr)
+
+        st = []
+
+        for i in range(len(arr)):
+            while st and arr[st[-1]] >= arr[i]:
+                st.pop()
+            
+            if st:
+                left[i] = st[-1]
+            else:
+                left[i] = 0
+            st.append(i)
+        
+        return left
 
     # this is optimal
     def _largestRectangleArea(self, heights: List[int]) -> int:
@@ -102,3 +121,5 @@ class Solution:
 # print(Solution().largestRectangleArea([5,5,5,5,5]))
 print(Solution().largestRectangleArea([2,1,5,6,2,3]))
 # print(Solution().largestRectangleArea([6, 2, 5, 4, 5, 1, 6]))
+
+print(Solution().findleftmax([2,1,5,6,2,3]))

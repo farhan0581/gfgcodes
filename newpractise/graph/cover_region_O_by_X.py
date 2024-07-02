@@ -3,7 +3,7 @@ Given an m x n matrix board containing 'X' and 'O', capture all regions that are
 
 A region is captured by flipping all 'O's into 'X's in that surrounded region.
 
-/Users/ba-00023252/Desktop/gfgcodes/data/xogrid.jpg
+/Users/farhankhan/Desktop/gfgcodes/data/xogrid.jpg
 
 
 The approach is to first start BFS with the boundary nodes.

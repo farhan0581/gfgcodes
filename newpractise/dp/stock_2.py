@@ -88,3 +88,25 @@ l = [1, 2, 3, 4, 5, 6, 7]
 # l = l[::-1]
 
 print(getMaximumProfit(l, len(l)))
+
+
+
+'''
+Another solution greedy based
+we can buy multiple times
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        start = 0
+        end = 1
+        profit = 0
+
+        # to simulate any holding stock and sell in the end
+        prices.append(-1)
+
+        for end in range(1, len(prices)):
+            if prices[end] <= prices[end-1]:
+                profit += prices[end-1]-prices[start]
+                start = end
+        return profit
+        
+'''
