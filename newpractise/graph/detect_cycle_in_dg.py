@@ -6,7 +6,7 @@ check whether it contains any cycle or not.
 
 class Solution:
 
-    def dfs(self,node,adj,stack,vis):
+    def dfs(self, node, adj, stack, vis):
         vis[node] = 1
         
         # put in the stack

@@ -6,14 +6,10 @@ A node is a terminal node if there are no outgoing edges. A node is a safe node 
 Return an array containing all the safe nodes of the graph. The answer should be sorted in ascending order.
 self loop is also taken care of.
 
-
 this is easy
 
 just like topological sort using bfs
 we just need to reverse the graph
-
-
-
 '''
 
 

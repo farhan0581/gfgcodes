@@ -8,7 +8,7 @@ Return the number of land cells in grid for which we cannot walk off the boundar
 '''
 
 
-class Solution(object):
+class Solution:
     def numEnclaves(self, grid):
         """
         :type grid: List[List[int]]

@@ -3,8 +3,6 @@ Given an array of integers nums and an integer k. A continuous subarray is calle
 
 Return the number of nice sub-arrays.
 
- 
-
 Example 1:
 
 Input: nums = [1,1,2,1,1], k = 3
@@ -20,6 +18,7 @@ Example 3:
 Input: nums = [2,2,2,1,2,2,1,2,2,2], k = 2
 Output: 16
 '''
+from typing import List
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
 

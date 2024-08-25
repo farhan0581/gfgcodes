@@ -24,8 +24,8 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
-        m1 = {}
-        m2 = {}
+        m1 = {} # to find for p
+        m2 = {} # original for s
         ans = []
         if len(s) < len(p):
             return []

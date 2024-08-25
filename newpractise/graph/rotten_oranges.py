@@ -3,9 +3,6 @@ class SolutionOrange:
     def bfs(self, grid, q, vis, fresh):
 
         maxt = 0
-        
-        
-        
         while len(q) > 0:
             i,j,t = q.pop(0)
             vis[i][j] = 1
